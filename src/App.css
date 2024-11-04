@@ -1,0 +1,183 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/*grid*/
+
+/* Untuk Sisi Kiri */
+/* .side-panel {
+  background-color: #f8f9fa;
+  height: 100vh;
+  overflow: hidden;
+} */
+
+/* Root container styling */
+html {
+  scroll-behavior: smooth;
+}
+
+
+.nav {
+  color: black;
+}
+
+.container-fluid {
+  background-color: #e0e4e7;
+  color: black;
+}
+
+/* Profile section styling */
+.contentProfile {
+  padding: 50px;
+  height: 100vh;
+  background-color: #0F4C75;
+  color: black;
+  animation: slideDown 0.8s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Main content area styling */
+.contentContents {
+  background-color: #e0e4e7;
+  padding: 20px;
+  padding-top: 2%;
+}
+
+/* Styling for paragraphs within contentContents */
+.contentContents > p {
+  padding: 20px;
+  padding-top: 1%;
+}
+
+/* Scrollable container for both Profile and Content sections */
+.scrollable-container {
+  height: 100vh;
+  overflow-y: auto;
+  padding-right: 15px; /* Provides extra padding on the right for better scrolling */
+}
+
+/* Scrollable content area for the main content section */
+.scrollable-content {
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Side panel (Profile) sticky positioning on larger screens */
+.side-panel {
+  position: sticky;
+  top: 0;
+}
+
+/* Accordion styling */
+.accordion {
+  background-color: transparent;
+  border: none;
+}
+
+.item {
+  margin-bottom: 15px;
+}
+
+.accordion-header {
+  font-weight: bold;
+}
+
+.accordion-body h5 {
+  font-weight: bold;
+}
+
+.accordion .item {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  color: black;
+}
+
+.accordion .item .accordion-header button {
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 1rem;
+  letter-spacing: .125rem;
+  line-height: 1.375rem;
+  color: black;
+  vertical-align: middle;
+  padding: 10px 0;
+}
+
+/* Carousel indicator styling */
+.carousel-indicators[data-bs-target] {
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+}
+
+/* Responsive styling for mobile screens */
+@media (max-width: 768px) {
+  .contentProfile {
+    padding: 20px;
+    height: auto;
+  }
+  
+  .contentContents {
+    padding: 10px;
+  }
+
+  .scrollable-container,
+  .scrollable-content {
+    height: auto;
+  }
+}
+
+
+
+
+
