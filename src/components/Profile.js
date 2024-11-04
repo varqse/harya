@@ -1,11 +1,11 @@
 import React from 'react';
-import Nav from 'react-bootstrap/Nav';
+// import Nav from 'react-bootstrap/Nav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-import { NavbarBrand } from 'react-bootstrap';
+// import { NavbarBrand } from 'react-bootstrap';
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
 
@@ -36,13 +36,13 @@ const Profile = ({ scrollToSection }) => {
 
 
         <div className="d-flex align-items-end bottom-0 py-5 px-3">
-        <a href="https://www.linkedin.com/in/harya-pranatreshna-a69781a/" target="_blank" className="mx-2">
+        <a href="https://www.linkedin.com/in/harya-pranatreshna-a69781a/" target="_blank" rel="noreferrer" className="mx-2">
           <FontAwesomeIcon icon={faLinkedin} className='text-black' size="3x" />
         </a>
-        <a href="https://www.instagram.com/harya_id/" target="_blank" className="mx-2">
+        <a href="https://www.instagram.com/harya_id/" target="_blank" rel="noreferrer" className="mx-2">
           <FontAwesomeIcon icon={faInstagram} className='text-black' size="3x" />
         </a>
-        <a href="https://www.facebook.com/harya.id" target="_blank" className="mx-2">
+        <a href="https://www.facebook.com/harya.id" target="_blank" rel="noreferrer" className="mx-2">
           <FontAwesomeIcon icon={faFacebook} className='text-black' size="3x" />
         </a>
       </div>
