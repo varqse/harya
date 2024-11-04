@@ -7,7 +7,7 @@ import { Accordion } from 'react-bootstrap';
 // import photo5 from '../assets/images/photo5.jpg';
 // import photo6 from '../assets/images/photo6.jpg';
 // import photo7 from '../assets/images/photo7.jpg';
-import { Card, Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 
 const cardData = [
