@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './App.css';
 import Profile from "./components/Profile";
 import Content from "./components/Content";
@@ -6,10 +6,17 @@ import Content from "./components/Content";
 
 
 function App() {
+  const contentRef = useRef(null);
+
+  const handleNavigation = (id) => {
+    if (contentRef.current) {
+      contentRef.current.scrollToSection(id);
+    }
+  };
+
   return (
     <div className="container-fluid">
       <div className="row">
-        {/* Profile untuk Mobile (di atas Content) */}
         <div className="col-12 d-md-none">
           <div className="scrollable-container">
             <Profile />
@@ -17,14 +24,12 @@ function App() {
           </div>
         </div>
 
-        {/* Sisi Kiri - Profile untuk Desktop */}
         <div className="col-md-4 d-none d-md-block side-panel">
-          <Profile />
+          <Profile onNavigate={handleNavigation} />
         </div>
 
-        {/* Sisi Kanan - Konten yang bisa di-scroll */}
         <div className="col-md-8 col-12 scrollable-content d-none d-md-block">
-          <Content />
+          <Content ref={contentRef} />
         </div>
       </div>
     </div>
