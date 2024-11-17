@@ -10,7 +10,7 @@ import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
 
 
-const Profile = ({ scrollToSection }) => {
+const Profile = ({}) => {
 
     return (
       <div className="contentProfile container position-relative">
@@ -37,13 +37,13 @@ const Profile = ({ scrollToSection }) => {
 
         <div className="d-flex align-items-end bottom-0 py-5 px-3">
         <a href="https://www.linkedin.com/in/harya-pranatreshna-a69781a/" target="_blank" rel="noreferrer" className="mx-2">
-          <FontAwesomeIcon icon={faLinkedin} className='text-black' size="3x" />
+          <FontAwesomeIcon icon={faLinkedin} className='text-black' size="2x" />
         </a>
         <a href="https://www.instagram.com/harya_id/" target="_blank" rel="noreferrer" className="mx-2">
-          <FontAwesomeIcon icon={faInstagram} className='text-black' size="3x" />
+          <FontAwesomeIcon icon={faInstagram} className='text-black' size="2x" />
         </a>
         <a href="https://www.facebook.com/harya.id" target="_blank" rel="noreferrer" className="mx-2">
-          <FontAwesomeIcon icon={faFacebook} className='text-black' size="3x" />
+          <FontAwesomeIcon icon={faFacebook} className='text-black' size="2x" />
         </a>
       </div>
       </div>
