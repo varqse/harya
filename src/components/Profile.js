@@ -9,22 +9,25 @@ import Button from 'react-bootstrap/Button';
 const Profile = ({ onNavigate = () => {} }) => {
   return (
     <div className="contentProfile container position-relative">
-      <h1 className="fw-bold px-3">Harya Pranatreshna</h1>
-      <p className="px-3">Gresik Plant Manager for Cargill Cocoa and Chocolate</p>
-
       <div>
-        <Button
-          variant="secondary"
-          style={{ backgroundColor: '#3282B8', borderColor: 'black', color: 'black' }}
-          className="text-black ms-3"
-        >
-          Message <Badge variant="secondary"></Badge>
-          <FontAwesomeIcon icon={faPaperPlane} className="ms-2" />
-          <span className="visually-hidden">unread messages</span>
-        </Button>
+        <h1 className="fw-bold px-3">Harya Pranatreshna</h1>
+        <p className="px-3">Gresik Plant Manager for Cargill Cocoa and Chocolate</p>
+
+        <div>
+          <Button
+            variant="secondary"
+            style={{ backgroundColor: '#3282B8', borderColor: 'black', color: 'black' }}
+            className="text-black ms-3"
+          >
+            Message <Badge variant="secondary"></Badge>
+            <FontAwesomeIcon icon={faPaperPlane} className="ms-2" />
+            <span className="visually-hidden">unread messages</span>
+          </Button>
+        </div> 
       </div>
 
-      <div className="nav">
+
+      <div className="nav pt-3">
         <Nav className="flex-column d-none d-md-block">
           <Nav.Link onClick={() => onNavigate('about')} style={{ color: 'black' }}>
             About
@@ -32,13 +35,13 @@ const Profile = ({ onNavigate = () => {} }) => {
           <Nav.Link onClick={() => onNavigate('experience')} style={{ color: 'black' }}>
             Experience
           </Nav.Link>
-          <Nav.Link onClick={() => onNavigate('portfolio')} style={{ color: 'black' }}>
-            Portfolio
+          <Nav.Link onClick={() => onNavigate('article')} style={{ color: 'black' }}>
+            Article
           </Nav.Link>
         </Nav>
       </div>
 
-      <div className="d-flex align-items-end bottom-0 py-5 px-3">
+      <div className="d-flex align-items-end bottom-0">
         <a
           href="https://www.linkedin.com/in/harya-pranatreshna-a69781a/"
           target="_blank"

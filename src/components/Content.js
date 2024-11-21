@@ -10,7 +10,7 @@ import article1 from '../assets/images/article1.jpg'
 // import photo7 from '../assets/images/photo7.jpg';
 
 const cardData = [
-  { id: 1, title: 'Everybody (including the bosses - unconsciously) said people leave bosses, not companies. And why would you want to do that ?', img: article1, text: '', link: 'https://www.linkedin.com/pulse/everybody-including-bosses-unconsciously-said-leave-pranatreshna/?trackingId=QTUJL9SiRY%2BzQFnKGYbmhQ%3D%3D' },
+  { id: 1, title: 'Everybody (including the bosses - unconsciously) said people leave bosses, not companies. And why would you want to do that?', img: article1, text: '', link: 'https://www.linkedin.com/pulse/everybody-including-bosses-unconsciously-said-leave-pranatreshna/?trackingId=QTUJL9SiRY%2BzQFnKGYbmhQ%3D%3D' },
   // { id: 2, title: 'Card 2', img: photo2, text: '', link: 'https://example.com/card2' },
   // { id: 3, title: 'Card 3', img: photo3, text: 'lorem ipsum', link: 'https://example.com/card3' },
   // { id: 4, title: 'Card 4', img: photo4, text: 'Deskripsi', link: 'https://example.com/card4' },
@@ -22,13 +22,13 @@ const cardData = [
 const Content = React.forwardRef((props, ref) => {
   const aboutRef = useRef(null);
   const experienceRef = useRef(null);
-  const portfolioRef = useRef(null);
+  const articleRef = useRef(null);
 
   React.useImperativeHandle(ref, () => ({
     scrollToSection(id) {
       if (id === 'about') aboutRef.current.scrollIntoView({ behavior: 'smooth' });
       if (id === 'experience') experienceRef.current.scrollIntoView({ behavior: 'smooth' });
-      if (id === 'portfolio') portfolioRef.current.scrollIntoView({ behavior: 'smooth' });
+      if (id === 'article') articleRef.current.scrollIntoView({ behavior: 'smooth' });
     },
   }));
 
@@ -59,7 +59,7 @@ const Content = React.forwardRef((props, ref) => {
   return (
     <div className="contentContents">
       <section className="fade-in" id="about" ref={aboutRef}>
-      <h1 className='p-3'>UC could mean Unconscious Competent, Uncertified, Under Construction or Ultracivilzed (technology)</h1>
+      <h1 className='p-3 fw-bold'>UC could mean Unconscious Competent, Uncertified, Under Construction or Ultracivilzed (technology)</h1>
       <p className='p-4 pt-0 pb-0'>
         What my experiences tell me so far is that in the first years of my career I started with deviate path. Started as engineering management trainee in dairy company and ended up as packaging development, then process development and ultimately responsible for handling pilot plant, lab operations and also development projects
 
@@ -124,12 +124,40 @@ const Content = React.forwardRef((props, ref) => {
                 <h5>R&D Project Support Manager</h5>
                 <span className="text-muted">Jun 2007 - Jun 2009</span>
               </div>
+              <div className="mt-3">
+                <h5>Process Development Manager(Corporate)</h5>
+                <span className="text-muted">May 2005 - Jun 2009</span>
+                <p>
+                
+              </p>
+              </div>
+              <div className="mt-3">
+                <h5>Packaging Development Manager(Corporate)</h5>
+                <span className="text-muted">May 2005 - Jun 2009</span>
+                <p>
+                  
+                </p>
+              </div>
+              <div className="mt-3">
+                <h5>Packaging Development Supervisor(Corporate)</h5>
+                <span className="text-muted">May 2005 - Jun 2009</span>
+                <p>
+                  
+                </p>
+              </div>
+              <div className="mt-3">
+                <h5>Management Trainee</h5>
+                <span className="text-muted">May 2005 - Jun 2009</span>
+                <p>
+                  
+                </p>
+              </div>
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
       </section>
 
-      <section id="portfolio" ref={portfolioRef} className="pt-5">
+      <section id="article" ref={articleRef} className="pt-5">
         <div className="row">
           {cardData.map(card => (
             <div key={card.id} className="col-12 col-md-4">

@@ -65,6 +65,7 @@ html {
 
 /* Profile section styling */
 .contentProfile {
+  display: grid;
   padding: 50px;
   height: 100vh;
   background-color: #0F4C75;
