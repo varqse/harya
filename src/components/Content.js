@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Accordion, Card } from 'react-bootstrap';
+import { Accordion, Card, Row, Col, Image } from 'react-bootstrap';
 import article1 from '../assets/images/article1.jpg'
 // import photo1 from '../assets/images/photo1.jpg';
 // import photo2 from '../assets/images/photo2.jpg';
@@ -8,6 +8,9 @@ import article1 from '../assets/images/article1.jpg'
 // import photo5 from '../assets/images/photo5.jpg';
 // import photo6 from '../assets/images/photo6.jpg';
 // import photo7 from '../assets/images/photo7.jpg';
+import galleryimg1 from '../assets/images/galleryimg1.jpg'
+import galleryimg2 from '../assets/images/galleryimg2.jpg'
+import galleryimg3 from '../assets/images/galleryimg3.jpg'
 
 const cardData = [
   { id: 1, title: 'Everybody (including the bosses - unconsciously) said people leave bosses, not companies. And why would you want to do that?', img: article1, text: '', link: 'https://www.linkedin.com/pulse/everybody-including-bosses-unconsciously-said-leave-pranatreshna/?trackingId=QTUJL9SiRY%2BzQFnKGYbmhQ%3D%3D' },
@@ -174,6 +177,48 @@ const Content = React.forwardRef((props, ref) => {
           ))}
         </div>
       </section>
+
+      <section id="gallery" className="pt-5">
+      <div>
+        <Row>
+          <Col xs={6} md={4} className="pt-4">
+            <Image
+              src={galleryimg1}
+              thumbnail
+              style={{
+                width: '100%',
+                height: '200px',
+                objectFit: 'cover',
+              }}
+            />
+          </Col>
+          <Col xs={6} md={4} className="pt-4">
+            <Image
+              src={galleryimg2}
+              thumbnail
+              style={{
+                width: '100%',
+                height: '200px',
+                objectFit: 'cover',
+              }}
+            />
+          </Col>
+          <Col xs={6} md={4} className="pt-4">
+            <Image
+              src={galleryimg3}
+              thumbnail
+              style={{
+                width: '100%',
+                height: '200px',
+                objectFit: 'cover',
+              }}
+            />
+          </Col>
+        </Row>
+      </div>
+      </section>
+
+
     </div>
   );
 });
