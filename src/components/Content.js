@@ -179,44 +179,57 @@ const Content = React.forwardRef((props, ref) => {
       </section>
 
       <section id="gallery" className="pt-5">
-      <div>
-        <Row>
-          <Col xs={6} md={4} className="pt-4">
-            <Image
-              src={galleryimg1}
-              thumbnail
-              style={{
-                width: '100%',
-                height: '200px',
-                objectFit: 'cover',
-              }}
-            />
-          </Col>
-          <Col xs={6} md={4} className="pt-4">
-            <Image
-              src={galleryimg2}
-              thumbnail
-              style={{
-                width: '100%',
-                height: '200px',
-                objectFit: 'cover',
-              }}
-            />
-          </Col>
-          <Col xs={6} md={4} className="pt-4">
-            <Image
-              src={galleryimg3}
-              thumbnail
-              style={{
-                width: '100%',
-                height: '200px',
-                objectFit: 'cover',
-              }}
-            />
-          </Col>
-        </Row>
-      </div>
-      </section>
+  <div>
+    <Row>
+      <Col xs={6} md={4} className="pt-4">
+        <a href="/gallery/Makroholic">
+          <Image
+            src={galleryimg1}
+            thumbnail
+            style={{
+              width: '100%',
+              height: '200px',
+              objectFit: 'cover',
+              cursor: 'pointer',
+            }}
+          />
+        </a>
+      </Col>
+      <Col xs={6} md={4} className="pt-4">
+        <a href="/gallery/MotionAndEmotion">
+          <Image
+            src={galleryimg2}
+            thumbnail
+            style={{
+              width: '100%',
+              height: '200px',
+              objectFit: 'cover',
+              cursor: 'pointer',
+            }}
+          />
+        </a>
+      </Col>
+      <Col xs={6} md={4} className="pt-4">
+        <a href="/gallery/UltimateDrivingMachine">
+          <Image
+            src={galleryimg3}
+            thumbnail
+            style={{
+              width: '100%',
+              height: '200px',
+              objectFit: 'cover',
+              cursor: 'pointer',
+            }}
+          />
+        </a>
+      </Col>
+    </Row>
+    <div className="pt-4 text-center">
+      <a href="/gallery" className="btn btn-primary">See More</a>
+    </div>
+  </div>
+</section>
+
 
 
     </div>
