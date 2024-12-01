@@ -32,7 +32,7 @@ const Articles = () => {
                 Everybody said people leave bosses, not companies. And why would you want to do that?
               </h3>
               <span className="card__by">
-                by <a className="card__author" title="author">Harya Pranatreshna</a>
+                by <p className="card__author" title="author">Harya Pranatreshna</p>
               </span>
             </div>
           </article>
@@ -53,7 +53,7 @@ const Articles = () => {
               <span className="card__category">Travel</span>
               <h3 className="card__title">Discover the sea</h3>
               <span className="card__by">
-                by <a className="card__author" title="author">Harya Pranatreshna</a>
+                by <p className="card__author" title="author">Harya Pranatreshna</p>
               </span>
             </div>
           </article>
