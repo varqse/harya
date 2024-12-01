@@ -3,10 +3,15 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Profile from "./components/Profile";
 import Content from "./components/Content";
+
 import Gallery from "./pages/Gallery";
 import Makroholic from "./pages/Makroholic";
 import MotionAndEmotion from "./pages/MotionAndEmotion";
 import UltimateDrivingMachine from "./pages/UltimateDrivingMachine";
+
+import Articles from "./pages/Articles";
+import EverybodyLeaveBossesNotCompaniesWhy from './pages/Articles/EverybodyLeaveBossesNotCompaniesWhy';
+
 
 function App() {
   const contentRef = useRef(null);
@@ -20,7 +25,6 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Rute utama dengan layout penuh */}
         <Route path="/" element={
           <div className="container-fluid">
             <div className="row">
@@ -46,6 +50,9 @@ function App() {
         <Route path="/gallery/Makroholic" element={<Makroholic />} />
         <Route path="/gallery/MotionAndEmotion" element={<MotionAndEmotion />} />
         <Route path="/gallery/UltimateDrivingMachine" element={<UltimateDrivingMachine />} />
+        <Route path="/articles" element={<Articles />} />
+        <Route path="/articles/EverybodyLeaveBossesNotCompaniesWhy" element={<EverybodyLeaveBossesNotCompaniesWhy />} />
+
       </Routes>
     </Router>
   );

@@ -2,9 +2,6 @@ import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-import Badge from 'react-bootstrap/Badge';
-import Button from 'react-bootstrap/Button';
 
 const Profile = ({ onNavigate = () => {} }) => {
   return (
@@ -13,16 +10,8 @@ const Profile = ({ onNavigate = () => {} }) => {
         <h1 className="fw-bold px-3">Harya Pranatreshna</h1>
         <p className="px-3">Gresik Plant Manager for Cargill Cocoa and Chocolate</p>
 
-        <div>
-          <Button
-            variant="secondary"
-            style={{ backgroundColor: '#3282B8', borderColor: 'black', color: 'black' }}
-            className="text-black ms-3"
-          >
-            Message <Badge variant="secondary"></Badge>
-            <FontAwesomeIcon icon={faPaperPlane} className="ms-2" />
-            <span className="visually-hidden">unread messages</span>
-          </Button>
+        <div class="buttonContainer" className="px-3">
+          <button class="message">Message</button>
         </div> 
       </div>
 

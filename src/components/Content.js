@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import { Accordion, Card, Row, Col, Image } from 'react-bootstrap';
-import article1 from '../assets/images/article1.jpg'
+import { Accordion, Row, Col, Image } from 'react-bootstrap';
+// import article1 from '../assets/images/article1.jpg'
 // import photo1 from '../assets/images/photo1.jpg';
 // import photo2 from '../assets/images/photo2.jpg';
 // import photo3 from '../assets/images/photo3.jpg';
@@ -12,15 +12,6 @@ import galleryimg1 from '../assets/images/galleryimg1.jpg'
 import galleryimg2 from '../assets/images/galleryimg2.jpg'
 import galleryimg3 from '../assets/images/galleryimg3.jpg'
 
-const cardData = [
-  { id: 1, title: 'Everybody (including the bosses - unconsciously) said people leave bosses, not companies. And why would you want to do that?', img: article1, text: '', link: 'https://www.linkedin.com/pulse/everybody-including-bosses-unconsciously-said-leave-pranatreshna/?trackingId=QTUJL9SiRY%2BzQFnKGYbmhQ%3D%3D' },
-  // { id: 2, title: 'Card 2', img: photo2, text: '', link: 'https://example.com/card2' },
-  // { id: 3, title: 'Card 3', img: photo3, text: 'lorem ipsum', link: 'https://example.com/card3' },
-  // { id: 4, title: 'Card 4', img: photo4, text: 'Deskripsi', link: 'https://example.com/card4' },
-  // { id: 5, title: 'Card 5', img: photo5, text: 'Deskripsi card 5.', link: 'https://example.com/card5' },
-  // { id: 6, title: 'Card 6', img: photo6, text: 'Deskripsi Deskripsi Deskripsi Deskripsi Deskripsi Deskripsi Deskripsi Deskripsi Deskripsi Deskripsi Deskripsi Deskripsi', link: 'https://example.com/card6' },
-  // { id: 7, title: 'Card 7', img: photo7, text: 'Deskripsi card 7.', link: 'https://example.com/card7' },
-];
 
 const Content = React.forwardRef((props, ref) => {
   const aboutRef = useRef(null);
@@ -162,19 +153,31 @@ const Content = React.forwardRef((props, ref) => {
 
       <section id="article" ref={articleRef} className="pt-5">
         <div className="row">
-          {cardData.map(card => (
-            <div key={card.id} className="col-12 col-md-4">
-              <Card className="fade-in-card" style={{ margin: '1rem', textAlign: 'center' }}>
-                <a href={card.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
-                  <Card.Img variant="top" src={card.img} style={{ height: '180px', objectFit: 'cover', cursor: 'pointer' }} />
-                  <Card.Body>
-                    <Card.Title>{card.title}</Card.Title>
-                    <Card.Text>{card.text}</Card.Text>
-                  </Card.Body>
-                </a>
-              </Card>
+          <div class="card" onClick={() => (window.location.href = "/articles/EverybodyLeaveBossesNotCompaniesWhy")}>
+            <div class="content">
+              <p class="heading">Everybody (including the bosses - unconsciously) said people leave bosses, not companies. And why would you want to do that?</p>
+              <p class="para para-sm">by Harya Pranatreshna - 3 min read</p>
             </div>
-          ))}
+          </div>
+        </div>
+        <div className="pt-4 text-end">
+          <button class="cta" onClick={() => (window.location.href = "/articles")}>
+            <span class="hover-underline-animation"> See more </span>
+            <svg
+              id="arrow-horizontal"
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="10"
+              viewBox="0 0 46 16"
+            >
+              <path
+                id="Path_10"
+                data-name="Path 10"
+                d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                transform="translate(30)"
+              ></path>
+            </svg>
+          </button>
         </div>
       </section>
 
@@ -224,8 +227,24 @@ const Content = React.forwardRef((props, ref) => {
         </a>
       </Col>
     </Row>
-    <div className="pt-4 text-center">
-      <a href="/gallery" className="btn btn-primary">See More</a>
+    <div className="pt-4 text-end">
+    <button className="cta" onClick={() => (window.location.href = "/gallery")}>
+      <span className="hover-underline-animation"> See more </span>
+      <svg
+        id="arrow-horizontal"
+        xmlns="http://www.w3.org/2000/svg"
+        width="30"
+        height="10"
+        viewBox="0 0 46 16"
+      >
+        <path
+          id="Path_10"
+          data-name="Path 10"
+          d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+          transform="translate(30)"
+        ></path>
+      </svg>
+    </button>
     </div>
   </div>
 </section>
