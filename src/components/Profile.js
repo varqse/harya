@@ -10,9 +10,7 @@ const Profile = ({ onNavigate = () => {} }) => {
         <h1 className="fw-bold px-3">Harya Pranatreshna</h1>
         <p className="px-3">Gresik Plant Manager for Cargill Cocoa and Chocolate</p>
 
-        <div class="buttonContainer" className="px-3">
-          <button class="message">Message</button>
-        </div> 
+
       </div>
 
 

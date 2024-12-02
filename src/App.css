@@ -23,39 +23,8 @@ html {
   animation: slideDown 0.8s ease-out;
 }
 
-/* From Uiverse.io by SteveBloX */
-.buttonContainer {
-  text-align: left;
-}
-
-.message {
-  width: 100px;
-  height: 40px;
-  border: 3px solid #black;
-  border-radius: 45px;
-  transition: all 0.3s;
-  background: white;
-  font-size: 1em;
-  font-weight: 550;
-}
-
-.message:hover {
-  background: #0F4C75;
-  color: white;
-  font-size: 1.2em;
-}
 
 
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 
 /* Main content area styling */
@@ -425,6 +394,78 @@ border-bottom-right-radius: 12px;
 .cardarticle:hover .card__info-hover {
     opacity: 1;
 }
+
+
+
+
+
+/* Container untuk setiap kartu */
+.cardgallery {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 200px; /* Tinggi tetap */
+  border-radius: 10px; /* Membuat sudut melengkung */
+  overflow: hidden;
+  text-decoration: none; /* Hilangkan underline */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+}
+
+/* Efek hover pada kartu */
+.cardgallery:hover {
+  transform: scale(1.05); /* Perbesar sedikit */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Bayangan lebih tajam */
+}
+
+/* Gambar di dalam kartu */
+.cardgallery__image {
+  width: 100%; /* Penuh horizontal */
+  height: 100%; /* Penuh vertikal */
+  background-size: cover; /* Sesuaikan gambar */
+  background-position: center; /* Fokus pada tengah gambar */
+  transition: transform 0.3s ease; /* Animasi zoom saat hover */
+}
+
+/* Zoom gambar saat hover */
+.cardgallery:hover .cardgallery__image {
+  transform: scale(1.1); /* Perbesar gambar */
+}
+
+/* Konten overlay pada kartu */
+.cardgallery__content {
+  position: absolute; /* Tetap pada posisi kartu */
+  bottom: 0; /* Di bagian bawah kartu */
+  left: 0; /* Mulai dari kiri */
+  width: 100%; /* Penuh horizontal */
+  background: rgba(0, 0, 0, 0.6); /* Background hitam transparan */
+  color: white; /* Warna teks putih */
+  padding: 10px; /* Jarak dalam */
+  box-sizing: border-box; /* Hitung padding dalam dimensi */
+  opacity: 0; /* Awalnya tidak terlihat */
+  transform: translateY(100%); /* Awalnya di luar view */
+  transition: all 0.3s ease; /* Animasi muncul */
+}
+
+/* Konten muncul saat hover */
+.cardgallery:hover .cardgallery__content {
+  opacity: 1; /* Muncul */
+  transform: translateY(0); /* Geser ke tempat semula */
+}
+
+/* Judul pada kartu */
+.cardgallery__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0; /* Hilangkan margin */
+}
+
+/* Deskripsi pada kartu */
+.cardgallery__description {
+  font-size: 14px;
+  margin: 5px 0 0; /* Margin atas kecil */
+}
+
 
 
 

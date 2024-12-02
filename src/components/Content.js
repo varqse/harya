@@ -182,73 +182,73 @@ const Content = React.forwardRef((props, ref) => {
       </section>
 
       <section id="gallery" className="pt-5">
-  <div>
-    <Row>
-      <Col xs={6} md={4} className="pt-4">
-        <a href="/gallery/Makroholic">
-          <Image
-            src={galleryimg1}
-            thumbnail
-            style={{
-              width: '100%',
-              height: '200px',
-              objectFit: 'cover',
-              cursor: 'pointer',
-            }}
-          />
-        </a>
-      </Col>
-      <Col xs={6} md={4} className="pt-4">
-        <a href="/gallery/MotionAndEmotion">
-          <Image
-            src={galleryimg2}
-            thumbnail
-            style={{
-              width: '100%',
-              height: '200px',
-              objectFit: 'cover',
-              cursor: 'pointer',
-            }}
-          />
-        </a>
-      </Col>
-      <Col xs={6} md={4} className="pt-4">
-        <a href="/gallery/UltimateDrivingMachine">
-          <Image
-            src={galleryimg3}
-            thumbnail
-            style={{
-              width: '100%',
-              height: '200px',
-              objectFit: 'cover',
-              cursor: 'pointer',
-            }}
-          />
-        </a>
-      </Col>
-    </Row>
-    <div className="pt-4 text-end">
-    <button className="cta" onClick={() => (window.location.href = "/gallery")}>
-      <span className="hover-underline-animation"> See more </span>
-      <svg
-        id="arrow-horizontal"
-        xmlns="http://www.w3.org/2000/svg"
-        width="30"
-        height="10"
-        viewBox="0 0 46 16"
-      >
-        <path
-          id="Path_10"
-          data-name="Path 10"
-          d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-          transform="translate(30)"
-        ></path>
-      </svg>
-    </button>
-    </div>
-  </div>
-</section>
+      <div>
+        <Row>
+          {/* Card Gallery 1 */}
+          <Col xs={6} md={4} className="pt-4">
+            <a href="/gallery/Makroholic" className="cardgallery">
+              <div
+                className="cardgallery__image"
+                style={{ backgroundImage: `url(${galleryimg1})` }}
+              ></div>
+              <div className="cardgallery__content">
+                <p className="cardgallery__title">Makroholic</p>
+                <p className="cardgallery__description">Explore the world up close</p>
+              </div>
+            </a>
+          </Col>
 
+          {/* Card Gallery 2 */}
+          <Col xs={6} md={4} className="pt-4">
+            <a href="/gallery/MotionAndEmotion" className="cardgallery">
+              <div
+                className="cardgallery__image"
+                style={{ backgroundImage: `url(${galleryimg2})` }}
+              ></div>
+              <div className="cardgallery__content">
+                <p className="cardgallery__title">Motion And Emotion</p>
+                <p className="cardgallery__description">Dynamic art in motion</p>
+              </div>
+            </a>
+          </Col>
+
+          {/* Card Gallery 3 */}
+          <Col xs={6} md={4} className="pt-4">
+            <a href="/gallery/UltimateDrivingMachine" className="cardgallery">
+              <div
+                className="cardgallery__image"
+                style={{ backgroundImage: `url(${galleryimg3})` }}
+              ></div>
+              <div className="cardgallery__content">
+                <p className="cardgallery__title">Ultimate Driving Machine</p>
+                <p className="cardgallery__description">
+                  Experience automotive excellence
+                </p>
+              </div>
+            </a>
+          </Col>
+        </Row>
+        <div className="pt-4 text-end">
+          <button className="cta" onClick={() => (window.location.href = '/gallery')}>
+            <span className="hover-underline-animation"> See more </span>
+            <svg
+              id="arrow-horizontal"
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="10"
+              viewBox="0 0 46 16"
+            >
+              <path
+                id="Path_10"
+                data-name="Path 10"
+                d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                transform="translate(30)"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
 
 
     </div>
