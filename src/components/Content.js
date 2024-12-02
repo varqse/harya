@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Accordion, Row, Col, Image } from 'react-bootstrap';
+import { Accordion, Row, Col } from 'react-bootstrap';
 // import article1 from '../assets/images/article1.jpg'
 // import photo1 from '../assets/images/photo1.jpg';
 // import photo2 from '../assets/images/photo2.jpg';
